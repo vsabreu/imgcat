@@ -37,7 +37,7 @@ func cat(img string) error {
 	return wc.Close()
 }
 
-// use a badWriter{} in imgcat.NewWriter to simulate an error
+// use a badWriter in imgcat.NewWriter to simulate an error
 type badWriter struct{}
 
 func (badWriter) Write([]byte) (int, error) {
