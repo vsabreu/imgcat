@@ -14,7 +14,6 @@ func main() {
 		fmt.Println("Not enought arguments to cat.")
 		os.Exit(1)
 	}
-
 	for _, img := range os.Args[1:] {
 		if err := cat(img); err != nil {
 			fmt.Fprintf(os.Stderr, "Could not cat %s: %v\n", img, err)
