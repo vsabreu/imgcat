@@ -1,5 +1,7 @@
 package main
 
+
+
 import (
 	"fmt"
 	"io"
@@ -7,6 +9,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/vsabreu/imgcat/imgcat"
 )
+
+
+
 
 func main() {
 	if len(os.Args) < 2 {
@@ -21,6 +26,9 @@ func main() {
 	}
 	fmt.Println("finished")
 }
+
+
+
 
 func cat(img string) error {
 	f, err := os.Open(img)
