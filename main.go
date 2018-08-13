@@ -8,6 +8,9 @@ import (
 	"github.com/vsabreu/imgcat/imgcat"
 )
 
+
+
+
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("Not enought arguments to cat.")
@@ -21,6 +24,9 @@ func main() {
 	}
 	fmt.Println("finished")
 }
+
+
+
 
 func cat(img string) error {
 	f, err := os.Open(img)
