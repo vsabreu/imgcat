@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-
 	"github.com/pkg/errors"
 	"github.com/vsabreu/imgcat/imgcat"
 )
