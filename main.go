@@ -4,22 +4,29 @@ import (
 	"fmt"
 	"io"
 	"os"
-
 	"github.com/pkg/errors"
 	"github.com/vsabreu/imgcat/imgcat"
 )
+
+
+
 
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("Not enought arguments to cat.")
 		os.Exit(1)
 	}
+
 	for _, img := range os.Args[1:] {
 		if err := cat(img); err != nil {
 			fmt.Fprintf(os.Stderr, "Could not cat %s: %v\n", img, err)
 		}
 	}
+	fmt.Println("finished")
 }
+
+
+
 
 func cat(img string) error {
 	f, err := os.Open(img)
